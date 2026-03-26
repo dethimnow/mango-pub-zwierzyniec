@@ -1,4 +1,5 @@
 import { ContactNoclegi } from "@/components/ContactNoclegi";
+import { NoclegiSection } from "@/components/NoclegiSection";
 import { EventsCulture } from "@/components/EventsCulture";
 import { FoodDrink } from "@/components/FoodDrink";
 import { Gallery } from "@/components/Gallery";
@@ -22,6 +23,7 @@ export default function Home() {
         <Gallery />
         <HoursLocation />
         <ContactNoclegi />
+        <NoclegiSection />
       </main>
       <SiteFooter />
     </>
