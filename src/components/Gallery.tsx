@@ -53,7 +53,7 @@ export function Gallery() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true, margin: "-40px" }}
               transition={{ duration: 0.45, delay: i * 0.06 }}
-              className={`relative overflow-hidden rounded-2xl border border-[var(--border)] bg-surface ${p.grid}`}
+              className={`relative overflow-hidden rounded-2xl border border-[var(--border)] bg-surface shadow-sm ${p.grid}`}
             >
               <Image
                 src={p.src}

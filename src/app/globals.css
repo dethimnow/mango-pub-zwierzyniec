@@ -1,13 +1,15 @@
 @import "tailwindcss";
 
 :root {
-  --bg: #070707;
-  --fg: #f4f1ea;
-  --muted: #a39e94;
-  --mango: #ff9f1c;
-  --mango-deep: #e07b00;
-  --surface: #121210;
-  --border: rgba(244, 241, 234, 0.08);
+  --bg: #f7f6f3;
+  --fg: #12100e;
+  --muted: #5e5a54;
+  --mango: #e07800;
+  --mango-deep: #b85f00;
+  --surface: #ffffff;
+  --border: rgba(18, 16, 14, 0.08);
+  --shadow: 0 24px 80px -32px rgba(18, 16, 14, 0.12);
+  --ring: rgba(224, 120, 0, 0.35);
 }
 
 @theme inline {
@@ -38,7 +40,7 @@ body {
 }
 
 ::selection {
-  background: color-mix(in srgb, var(--mango) 35%, transparent);
+  background: color-mix(in srgb, var(--mango) 28%, transparent);
   color: var(--fg);
 }
 
@@ -47,13 +49,26 @@ body {
   position: fixed;
   inset: 0;
   z-index: 50;
-  opacity: 0.035;
+  opacity: 0.04;
+  mix-blend-mode: multiply;
   background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
 }
 
 .gradient-mesh {
   background:
-    radial-gradient(ellipse 80% 50% at 20% -20%, rgba(255, 159, 28, 0.22), transparent),
-    radial-gradient(ellipse 60% 40% at 100% 0%, rgba(224, 123, 0, 0.15), transparent),
-    radial-gradient(ellipse 50% 60% at 50% 100%, rgba(255, 159, 28, 0.08), transparent);
+    radial-gradient(ellipse 90% 55% at 15% -15%, rgba(224, 120, 0, 0.14), transparent 55%),
+    radial-gradient(ellipse 70% 45% at 95% 5%, rgba(255, 186, 77, 0.18), transparent 50%),
+    radial-gradient(ellipse 55% 50% at 50% 100%, rgba(224, 120, 0, 0.06), transparent 45%),
+    linear-gradient(180deg, var(--surface) 0%, transparent 42%);
+}
+
+.glass-header {
+  background: color-mix(in srgb, var(--surface) 78%, transparent);
+  box-shadow: 0 1px 0 var(--border);
+}
+
+.card-elevated {
+  background: var(--surface);
+  box-shadow: var(--shadow);
+  border: 1px solid var(--border);
 }

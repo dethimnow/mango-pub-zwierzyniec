@@ -80,7 +80,7 @@ export function Hero() {
           </Link>
           <Link
             href="#lokalizacja"
-            className="inline-flex items-center justify-center rounded-full border border-[var(--border)] px-8 py-3.5 text-base font-medium text-foreground transition-colors hover:bg-white/5"
+            className="inline-flex items-center justify-center rounded-full border border-[var(--border)] bg-surface px-8 py-3.5 text-base font-medium text-foreground shadow-sm transition-colors hover:bg-black/[0.03]"
           >
             Jak dojechać
           </Link>

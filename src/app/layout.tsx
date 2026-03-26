@@ -1,4 +1,4 @@
-import type { Metadata } from "next";
+import type { Metadata, Viewport } from "next";
 import { DM_Sans, Syne } from "next/font/google";
 import "./globals.css";
 
@@ -13,6 +13,10 @@ const syne = Syne({
   subsets: ["latin", "latin-ext"],
   weight: ["600", "700", "800"],
 });
+
+export const viewport: Viewport = {
+  themeColor: "#f7f6f3",
+};
 
 export const metadata: Metadata = {
   title: "Mango Pub — Zwierzyniec",

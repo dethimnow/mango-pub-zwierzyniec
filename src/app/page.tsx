@@ -3,6 +3,7 @@ import { EventsCulture } from "@/components/EventsCulture";
 import { FoodDrink } from "@/components/FoodDrink";
 import { Gallery } from "@/components/Gallery";
 import { Hero } from "@/components/Hero";
+import { InstagramShowcase } from "@/components/InstagramShowcase";
 import { Highlights } from "@/components/Highlights";
 import { HoursLocation } from "@/components/HoursLocation";
 import { SiteFooter } from "@/components/SiteFooter";
@@ -17,6 +18,7 @@ export default function Home() {
         <FoodDrink />
         <Highlights />
         <EventsCulture />
+        <InstagramShowcase />
         <Gallery />
         <HoursLocation />
         <ContactNoclegi />

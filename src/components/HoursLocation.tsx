@@ -7,7 +7,7 @@ const mapsUrl =
 
 export function HoursLocation() {
   return (
-    <section id="lokalizacja" className="scroll-mt-24 border-t border-[var(--border)] bg-surface/40 py-24 sm:py-32">
+    <section id="lokalizacja" className="scroll-mt-24 border-t border-[var(--border)] bg-black/[0.02] py-24 sm:py-32">
       <div className="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
         <div className="grid gap-12 lg:grid-cols-2 lg:items-start">
           <Reveal>
@@ -29,7 +29,7 @@ export function HoursLocation() {
               href={mapsUrl}
               target="_blank"
               rel="noopener noreferrer"
-              className="mt-6 inline-flex rounded-full border border-[var(--border)] px-6 py-3 text-sm font-semibold text-foreground transition-colors hover:bg-white/5"
+              className="mt-6 inline-flex rounded-full border border-[var(--border)] bg-surface px-6 py-3 text-sm font-semibold text-foreground shadow-sm transition-colors hover:bg-black/[0.03]"
             >
               Otwórz w Mapach Google
             </a>
@@ -37,7 +37,7 @@ export function HoursLocation() {
 
           <RevealStagger className="space-y-4">
             <RevealItem>
-              <div className="rounded-3xl border border-[var(--border)] bg-background/70 p-8">
+              <div className="card-elevated rounded-3xl p-8">
                 <h3 className="font-[family-name:var(--font-syne)] text-lg font-bold">Godziny otwarcia</h3>
                 <p className="mt-2 text-sm uppercase tracking-wider text-mango">Poniedziałek — niedziela</p>
                 <p className="mt-3 text-2xl font-semibold text-foreground">15:00 — 23:00</p>
@@ -48,7 +48,7 @@ export function HoursLocation() {
               </div>
             </RevealItem>
             <RevealItem>
-              <div className="rounded-3xl border border-mango/25 bg-mango/5 p-8">
+              <div className="rounded-3xl border border-mango/20 bg-mango/[0.08] p-8">
                 <p className="text-sm font-medium text-foreground">
                   Latem, podczas LAF, bywa wyjątkowo tłoczno — warto zajrzeć wcześniej albo zadzwonić po stolik.
                 </p>

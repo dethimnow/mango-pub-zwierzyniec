@@ -43,9 +43,9 @@ export function Highlights() {
               <motion.article
                 whileHover={reduce ? undefined : { y: -6 }}
                 transition={{ type: "spring", stiffness: 400, damping: 25 }}
-                className="relative overflow-hidden rounded-3xl border border-[var(--border)] bg-gradient-to-br from-surface to-background p-8"
+                className="relative overflow-hidden rounded-3xl border border-[var(--border)] bg-gradient-to-br from-surface via-background to-[#f0ebe3] p-8 shadow-sm"
               >
-                <span className="font-[family-name:var(--font-syne)] text-5xl font-extrabold text-white/[0.06]">
+                <span className="font-[family-name:var(--font-syne)] text-5xl font-extrabold text-foreground/[0.06]">
                   {c.accent}
                 </span>
                 <p className="mt-2 text-xs font-medium uppercase tracking-wider text-mango">{c.subtitle}</p>

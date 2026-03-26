@@ -10,7 +10,7 @@ export function ContactNoclegi() {
           <Reveal>
             <div
               id="kontakt"
-              className="scroll-mt-24 rounded-3xl border border-[var(--border)] bg-gradient-to-br from-surface to-background p-8 sm:p-10"
+              className="scroll-mt-24 rounded-3xl border border-[var(--border)] bg-gradient-to-br from-surface to-[#f3efe8] p-8 shadow-md shadow-black/5 sm:p-10"
             >
               <p className="text-sm font-semibold uppercase tracking-[0.2em] text-mango">Kontakt</p>
               <h2 className="mt-3 font-[family-name:var(--font-syne)] text-2xl font-bold sm:text-3xl">
@@ -29,7 +29,7 @@ export function ContactNoclegi() {
           <Reveal>
             <div
               id="noclegi"
-              className="scroll-mt-24 rounded-3xl border border-[var(--border)] bg-background/60 p-8 sm:p-10"
+              className="scroll-mt-24 card-elevated rounded-3xl p-8 sm:p-10"
             >
               <p className="text-sm font-semibold uppercase tracking-[0.2em] text-mango">Noclegi</p>
               <h2 className="mt-3 font-[family-name:var(--font-syne)] text-2xl font-bold sm:text-3xl">
@@ -41,7 +41,7 @@ export function ContactNoclegi() {
               </p>
               <a
                 href="tel:+48699185339"
-                className="mt-8 inline-flex rounded-full bg-foreground px-8 py-3.5 text-sm font-semibold text-background transition-transform hover:scale-[1.02] active:scale-[0.98]"
+                className="mt-8 inline-flex rounded-full bg-foreground px-8 py-3.5 text-sm font-semibold text-surface transition-transform hover:scale-[1.02] active:scale-[0.98]"
               >
                 Zapytaj o nocleg
               </a>

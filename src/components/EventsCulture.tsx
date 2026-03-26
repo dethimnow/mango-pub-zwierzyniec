@@ -4,7 +4,7 @@ import { Reveal, RevealItem, RevealStagger } from "@/components/Reveal";
 
 export function EventsCulture() {
   return (
-    <section id="wydarzenia" className="scroll-mt-24 border-y border-[var(--border)] bg-surface/30 py-24 sm:py-32">
+    <section id="wydarzenia" className="scroll-mt-24 border-y border-[var(--border)] bg-black/[0.02] py-24 sm:py-32">
       <div className="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
         <Reveal>
           <p className="text-sm font-semibold uppercase tracking-[0.2em] text-mango">Wydarzenia i kultura</p>
@@ -20,7 +20,7 @@ export function EventsCulture() {
 
         <RevealStagger className="mt-12 grid gap-6 lg:grid-cols-2">
           <RevealItem>
-            <div className="rounded-3xl border border-[var(--border)] bg-background/50 p-8">
+            <div className="card-elevated rounded-3xl p-8">
               <h3 className="font-[family-name:var(--font-syne)] text-xl font-bold">Letnia Akademia Filmowa</h3>
               <p className="mt-3 leading-relaxed text-muted">
                 W tym okresie pub tętni życiem — spotkasz tu widzów, twórców i gości festiwalu. Atmosfera jest wyjątkowa
@@ -29,7 +29,7 @@ export function EventsCulture() {
             </div>
           </RevealItem>
           <RevealItem>
-            <div className="rounded-3xl border border-[var(--border)] bg-background/50 p-8">
+            <div className="card-elevated rounded-3xl p-8">
               <h3 className="font-[family-name:var(--font-syne)] text-xl font-bold">Zwierzynieckie Warsztaty Wokalne</h3>
               <p className="mt-3 leading-relaxed text-muted">
                 W drugiej połowie sierpnia w sali kinowej odbywają się warsztaty wokalne. Otwarte próby i koncerty

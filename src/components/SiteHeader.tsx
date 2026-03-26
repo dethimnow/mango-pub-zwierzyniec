@@ -8,6 +8,7 @@ const links = [
   { href: "#start", label: "Start" },
   { href: "#jedzenie", label: "Jedzenie i napoje" },
   { href: "#wydarzenia", label: "Wydarzenia" },
+  { href: "#instagram", label: "Instagram" },
   { href: "#galeria", label: "Galeria" },
   { href: "#lokalizacja", label: "Lokalizacja" },
   { href: "#kontakt", label: "Kontakt" },
@@ -19,7 +20,7 @@ export function SiteHeader() {
   const reduce = useReducedMotion();
 
   return (
-    <header className="fixed top-0 right-0 left-0 z-40 border-b border-[var(--border)] bg-background/75 backdrop-blur-xl">
+    <header className="glass-header fixed top-0 right-0 left-0 z-40 backdrop-blur-xl backdrop-saturate-150">
       <div className="mx-auto flex h-16 max-w-6xl items-center justify-between gap-4 px-4 sm:px-6 lg:px-8">
         <Link
           href="#start"
@@ -33,7 +34,7 @@ export function SiteHeader() {
             <Link
               key={l.href}
               href={l.href}
-              className="rounded-full px-3 py-2 text-sm font-medium text-muted transition-colors hover:bg-white/5 hover:text-foreground"
+              className="rounded-full px-3 py-2 text-sm font-medium text-muted transition-colors hover:bg-black/[0.04] hover:text-foreground"
             >
               {l.label}
             </Link>
@@ -80,7 +81,7 @@ export function SiteHeader() {
             initial={reduce ? false : { height: 0, opacity: 0 }}
             animate={{ height: "auto", opacity: 1 }}
             exit={reduce ? undefined : { height: 0, opacity: 0 }}
-            className="overflow-hidden border-t border-[var(--border)] bg-background lg:hidden"
+            className="overflow-hidden border-t border-[var(--border)] bg-surface lg:hidden"
           >
             <nav className="flex flex-col gap-1 px-4 py-4" aria-label="Mobilne">
               {links.map((l) => (
@@ -88,7 +89,7 @@ export function SiteHeader() {
                   key={l.href}
                   href={l.href}
                   onClick={() => setOpen(false)}
-                  className="rounded-xl px-4 py-3 text-base font-medium text-foreground hover:bg-white/5"
+                  className="rounded-xl px-4 py-3 text-base font-medium text-foreground hover:bg-black/[0.04]"
                 >
                   {l.label}
                 </Link>

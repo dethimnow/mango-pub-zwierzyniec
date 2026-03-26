@@ -15,7 +15,7 @@ const items = [
 
 export function FoodDrink() {
   return (
-    <section id="jedzenie" className="scroll-mt-24 border-t border-[var(--border)] bg-surface/40 py-24 sm:py-32">
+    <section id="jedzenie" className="scroll-mt-24 border-t border-[var(--border)] bg-black/[0.02] py-24 sm:py-32">
       <div className="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
         <Reveal>
           <p className="text-sm font-semibold uppercase tracking-[0.2em] text-mango">Jedzenie i napoje</p>
@@ -31,7 +31,7 @@ export function FoodDrink() {
         <RevealStagger className="mt-14 grid gap-6 md:grid-cols-2">
           {items.map((item) => (
             <RevealItem key={item.title}>
-              <article className="group h-full rounded-3xl border border-[var(--border)] bg-background/60 p-8 transition-colors hover:border-mango/30">
+              <article className="group card-elevated h-full rounded-3xl p-8 transition-shadow hover:shadow-lg hover:shadow-black/5">
                 <div className="mb-4 h-1 w-12 rounded-full bg-mango transition-all group-hover:w-20" />
                 <h3 className="font-[family-name:var(--font-syne)] text-xl font-bold">{item.title}</h3>
                 <p className="mt-3 leading-relaxed text-muted">{item.body}</p>
