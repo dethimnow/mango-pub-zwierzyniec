@@ -3,42 +3,29 @@
 import Image from "next/image";
 import { motion, useReducedMotion } from "framer-motion";
 import { Reveal, RevealItem, RevealStagger } from "@/components/Reveal";
+import {
+  NOCLEGI_MAPS_URL,
+  NOCLEGI_WIX_URIS,
+  wixImageSrc,
+} from "@/data/wix-mango-images";
 
-const MAPS_QUERY = "Partyzant%C3%B3w+26%2C+22-470+Zwierzyniec";
-const MAPS_URL = `https://www.google.com/maps/search/?api=1&query=${MAPS_QUERY}`;
+const PUB_MAPS_URL =
+  "https://www.google.com/maps/search/?api=1&query=Partyzant%C3%B3w+26%2C+22-470+Zwierzyniec";
 
-const photos = [
-  {
-    src: "https://images.unsplash.com/photo-1580588851318-8132939319b5?w=900&q=80",
-    alt: "Domek letni w zieleni — spokojna okolica",
-    grid: "md:col-span-2 md:row-span-2 min-h-[260px] md:min-h-[400px]",
-  },
-  {
-    src: "https://images.unsplash.com/photo-1600210492486-724fe5c1fa65?w=700&q=80",
-    alt: "Taras i miejsce do wypoczynku na świeżym powietrzu",
-    grid: "min-h-[160px] md:min-h-[190px]",
-  },
-  {
-    src: "https://images.unsplash.com/photo-1529193591184-39a8fcc4eaa5?w=700&q=80",
-    alt: "Grill — murowany lub ogrodowy, wieczór przy jedzeniu",
-    grid: "min-h-[160px] md:min-h-[190px]",
-  },
-  {
-    src: "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=800&q=80",
-    alt: "Dom z ogrodem — dużo przestrzeni wokół",
-    grid: "md:col-span-2 min-h-[200px]",
-  },
-  {
-    src: "https://images.unsplash.com/photo-1501785888041-af3ef285b470?w=700&q=80",
-    alt: "Okolica na spacery i wypoczynek",
-    grid: "min-h-[200px]",
-  },
-  {
-    src: "https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?w=700&q=80",
-    alt: "Przytulne wnętrze — pełne wyposażenie",
-    grid: "min-h-[200px]",
-  },
-];
+const noclegiGrids = [
+  "md:col-span-2 md:row-span-2 min-h-[260px] md:min-h-[400px]",
+  "min-h-[160px] md:min-h-[190px]",
+  "min-h-[160px] md:min-h-[190px]",
+  "md:col-span-2 min-h-[200px]",
+  "min-h-[200px]",
+  "min-h-[200px]",
+] as const;
+
+const noclegiPhotos = NOCLEGI_WIX_URIS.map((uri, i) => ({
+  src: wixImageSrc(uri),
+  alt: `Noclegi Mango — zdjęcie ${i + 1}`,
+  grid: noclegiGrids[i] ?? "min-h-[180px]",
+}));
 
 export function NoclegiSection() {
   const reduce = useReducedMotion();
@@ -86,12 +73,12 @@ export function NoclegiSection() {
               Zapytaj o wolne terminy: 699 185 339
             </a>
             <a
-              href={MAPS_URL}
+              href={NOCLEGI_MAPS_URL}
               target="_blank"
               rel="noopener noreferrer"
               className="inline-flex items-center justify-center rounded-full border border-[var(--border)] bg-surface px-8 py-3.5 text-base font-medium text-foreground shadow-sm transition-colors hover:bg-black/[0.03]"
             >
-              Zobacz na mapie
+              Domek na mapie
             </a>
           </div>
         </Reveal>
@@ -103,9 +90,9 @@ export function NoclegiSection() {
         </Reveal>
 
         <div className="mt-8 grid grid-cols-1 gap-3 sm:grid-cols-2 md:grid-cols-3 md:gap-4">
-          {photos.map((p, i) => (
+          {noclegiPhotos.map((p, i) => (
             <motion.div
-              key={`${p.src}-${i}`}
+              key={p.src}
               initial={reduce ? false : { opacity: 0, y: 14 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true, margin: "-40px" }}
@@ -128,23 +115,38 @@ export function NoclegiSection() {
             Lokalizacja
           </h3>
           <p className="mt-3 leading-relaxed text-muted">
-            Kontakt i dojazd jak do Mango Pub — chętnie wskażemy dokładnie, jak dojechać do domku.
+            Domek: Bagno 63B (Bagno). Mango Pub — bar i kontakt: Zwierzyniec, ul. Partyzantów 26.
           </p>
           <address className="mt-4 not-italic text-foreground">
-            <span className="font-[family-name:var(--font-syne)] font-bold">Mango Pub</span>
+            <span className="font-[family-name:var(--font-syne)] font-bold">Domek (noclegi)</span>
+            <br />
+            Bagno 63B, 22-470 Bagno, Polska
+          </address>
+          <address className="mt-4 not-italic text-muted">
+            <span className="font-[family-name:var(--font-syne)] font-bold text-foreground">Mango Pub</span>
             <br />
             ul. Partyzantów 26
             <br />
             22-470 Zwierzyniec, Polska
           </address>
-          <a
-            href={MAPS_URL}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="mt-5 inline-flex rounded-full border border-[var(--border)] bg-surface px-6 py-3 text-sm font-semibold text-foreground shadow-sm transition-colors hover:bg-black/[0.03]"
-          >
-            Otwórz w Mapach Google
-          </a>
+          <div className="mt-5 flex flex-col gap-3 sm:flex-row sm:flex-wrap">
+            <a
+              href={NOCLEGI_MAPS_URL}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex rounded-full border border-[var(--border)] bg-surface px-6 py-3 text-sm font-semibold text-foreground shadow-sm transition-colors hover:bg-black/[0.03]"
+            >
+              Mapa — domek (Bagno)
+            </a>
+            <a
+              href={PUB_MAPS_URL}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex rounded-full border border-[var(--border)] bg-surface px-6 py-3 text-sm font-semibold text-foreground shadow-sm transition-colors hover:bg-black/[0.03]"
+            >
+              Mapa — pub (Zwierzyniec)
+            </a>
+          </div>
         </Reveal>
       </div>
     </section>
