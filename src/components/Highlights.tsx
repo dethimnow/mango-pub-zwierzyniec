@@ -6,19 +6,19 @@ import { Reveal, RevealItem, RevealStagger } from "@/components/Reveal";
 const cards = [
   {
     title: "Karaoke w poniedziałki",
-    subtitle: "Monday evenings",
+    subtitle: "Wieczory z mikrofonem",
     text: "Śpiewaj swoje ulubione kawałki — wieczory karaoke to u nas tradycja.",
     accent: "01",
   },
   {
     title: "Przekąski i klasyki baru",
-    subtitle: "Pub snacks",
+    subtitle: "Na mały i duży głód",
     text: "Drinki, piwo, pizza, pierogi — wszystko, czego potrzeba na dobry wieczór.",
     accent: "02",
   },
   {
     title: "Świętuj z nami",
-    subtitle: "Celebrate",
+    subtitle: "Od urodzin po Sylwestra",
     text: "Urodziny, Sylwester i inne okazje — dogadaj szczegóły i zarezerwuj stolik.",
     accent: "03",
   },
