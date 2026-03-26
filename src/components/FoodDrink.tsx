@@ -1,6 +1,7 @@
 "use client";
 
 import { Reveal, RevealItem, RevealStagger } from "@/components/Reveal";
+import { PYSZNE_ORDER_URL } from "@/lib/site";
 
 const items = [
   {
@@ -18,7 +19,7 @@ export function FoodDrink() {
     <section id="jedzenie" className="scroll-mt-24 border-t border-[var(--border)] bg-black/[0.02] py-24 sm:py-32">
       <div className="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
         <Reveal>
-          <p className="text-sm font-semibold uppercase tracking-[0.2em] text-mango">Jedzenie i napoje</p>
+          <p className="text-sm font-semibold uppercase tracking-[0.2em] text-brand-green">Jedzenie i napoje</p>
           <h2 className="mt-3 font-[family-name:var(--font-syne)] text-3xl font-bold tracking-tight sm:text-4xl md:text-5xl">
             Smak, który zostaje
           </h2>
@@ -39,6 +40,21 @@ export function FoodDrink() {
             </RevealItem>
           ))}
         </RevealStagger>
+
+        <Reveal>
+          <p className="mt-14 text-center text-base text-muted">
+            Pizzę zamówisz też z dostawą —{" "}
+            <a
+              href={PYSZNE_ORDER_URL}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="font-semibold text-brand-red underline decoration-brand-red/30 underline-offset-4 transition-colors hover:decoration-brand-red"
+            >
+              Pyszne.pl
+            </a>
+            .
+          </p>
+        </Reveal>
       </div>
     </section>
   );

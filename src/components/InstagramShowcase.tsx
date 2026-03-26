@@ -2,9 +2,7 @@
 
 import { motion, useReducedMotion } from "framer-motion";
 import { Reveal } from "@/components/Reveal";
-
-const PROFILE = "https://www.instagram.com/mango_zwierzyniec/";
-const EMBED = "https://www.instagram.com/mango_zwierzyniec/embed";
+import { INSTAGRAM_EMBED_URL, INSTAGRAM_URL } from "@/lib/site";
 
 export function InstagramShowcase() {
   const reduce = useReducedMotion();
@@ -13,14 +11,14 @@ export function InstagramShowcase() {
     <section id="instagram" className="scroll-mt-24 border-y border-[var(--border)] bg-surface py-24 sm:py-32">
       <div className="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
         <Reveal>
-          <p className="text-sm font-semibold uppercase tracking-[0.2em] text-mango">Instagram</p>
+          <p className="text-sm font-semibold uppercase tracking-[0.2em] text-brand-green">Instagram</p>
           <h2 className="mt-3 font-[family-name:var(--font-syne)] text-3xl font-bold tracking-tight sm:text-4xl md:text-5xl">
             Najnowsze z Mango
           </h2>
           <p className="mt-4 max-w-2xl text-lg text-muted">
             Zdjęcia i relacje prosto z baru — śledź{" "}
             <a
-              href={PROFILE}
+              href={INSTAGRAM_URL}
               target="_blank"
               rel="noopener noreferrer"
               className="font-semibold text-foreground underline decoration-mango/40 underline-offset-4 transition-colors hover:decoration-mango"
@@ -41,7 +39,7 @@ export function InstagramShowcase() {
           <div className="card-elevated overflow-hidden rounded-[1.75rem]">
             <div className="relative w-full bg-[#fafafa]">
               <iframe
-                src={EMBED}
+                src={INSTAGRAM_EMBED_URL}
                 title="Instagram Mango Pub Zwierzyniec"
                 className="block min-h-[620px] w-full sm:min-h-[680px] lg:min-h-[720px]"
                 loading="lazy"
@@ -51,7 +49,7 @@ export function InstagramShowcase() {
           </div>
           <div className="mt-6 flex flex-col items-stretch gap-3 sm:flex-row sm:justify-center">
             <a
-              href={PROFILE}
+              href={INSTAGRAM_URL}
               target="_blank"
               rel="noopener noreferrer"
               className="inline-flex items-center justify-center gap-2 rounded-full bg-[linear-gradient(115deg,#f58529,#dd2a7b,#8134af)] px-8 py-3.5 text-sm font-semibold text-white shadow-lg transition-transform hover:scale-[1.02] active:scale-[0.98] [box-shadow:0_12px_40px_-8px_rgba(221,42,123,0.35)]"

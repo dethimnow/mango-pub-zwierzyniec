@@ -15,16 +15,20 @@ const syne = Syne({
 });
 
 export const viewport: Viewport = {
-  themeColor: "#f7f6f3",
+  themeColor: "#f9f4e8",
 };
 
 export const metadata: Metadata = {
-  title: "Mango Pub — Zwierzyniec",
+  title: "Mango Pizza — Pub Zwierzyniec",
   description:
-    "Pizza, pierogi, golonka i galareta. Drinki, piwo, przyjazna atmosfera. Bar przy kinie Skarb w Zwierzyńcu.",
+    "Mango Pizza i pub w Zwierzyńcu — pizza z pieca, pierogi, golonka. Zamów na Pyszne.pl lub wpadnij do baru przy kinie Skarb.",
+  icons: {
+    icon: "/brand/logo-mango-pizza.png",
+    apple: "/brand/logo-mango-pizza.png",
+  },
   openGraph: {
-    title: "Mango Pub — Zwierzyniec",
-    description: "Najlepszy pub w mieście. Zapraszamy.",
+    title: "Mango Pizza — Pub Zwierzyniec",
+    description: "Zamów online lub odwiedź nas przy kinie Skarb.",
     locale: "pl_PL",
     type: "website",
   },
