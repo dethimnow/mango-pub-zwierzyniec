@@ -12,6 +12,7 @@ export const fadeUp: Variants = {
 };
 
 export const stagger: Variants = {
+  hidden: {},
   visible: {
     transition: { staggerChildren: 0.08, delayChildren: 0.06 },
   },
